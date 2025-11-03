@@ -1,0 +1,86 @@
+/* General app styles */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Page title */
+h1 {
+  text-align: center;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Product container – side by side cards */
+.container {
+  display: flex;
+  flex-wrap: wrap;          /* Allows wrapping on smaller screens */
+  justify-content: center;  /* Centers all cards horizontally */
+  gap: 20px;                /* Space between cards */
+  padding: 20px;
+}
+
+/* Each product card */
+.card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  width: 250px;             /* Fixed width for side-by-side layout */
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Hover effect for cards */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Product image */
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* Text styling */
+.card h2 {
+  color: #2e8b57;
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.card h3 {
+  color: #333;
+  font-size: 1rem;
+  margin: 5px 0;
+}
+
+.card h4 {
+  color: #666;
+  font-size: 0.9rem;
+  margin: 4px 0;
+}
+
+.card p {
+  color: #555;
+  font-size: 0.9rem;
+  margin: 8px 0;
+}
+
+/* ✅ Responsive layout for small screens */
+@media (max-width: 600px) {
+  .container {
+    flex-direction: column;   /* Stack vertically on mobile */
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;               /* Full width on small screens */
+  }
+}
